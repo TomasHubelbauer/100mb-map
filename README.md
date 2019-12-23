@@ -9,10 +9,10 @@ about trying to squeeze all this data into a single file and use `fetch` with ra
 
 ## To-Do
 
-### Download the Planet OSM XML
+### Reduce the PBF as far as possible dropping metadata and developing a compressed format
 
-https://planet.openstreetmap.org/
-
-### Reduce it as far as possible dropping metadata and developing a compressed format
+Downloaded `planet.pbf` to the Nuc.
 
 ### Develop a web app for rendering the vectors
+
+### Set up patching the PBF with weekly diffs
