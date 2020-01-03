@@ -7,11 +7,13 @@ I would like to put together a vector map which uses no API, just a static file 
 repositories have a file size limit of 100 MB: https://help.github.com/en/articles/what-is-my-disk-quota and I am thinking
 about trying to squeeze all this data into a single file and use `fetch` with range requests to get bits as they are needed.
 
+**The PBF is stored at `D:/planet-191216.osm.pbf` on the home server.**
+
 ## To-Do
 
 ### Reduce the PBF as far as possible dropping metadata and developing a compressed format
 
-Downloaded `planet.pbf` to the Nuc.
+`D:/planet-191216.osm.pbf` on the home server.
 
 ### Develop a web app for rendering the vectors
 
