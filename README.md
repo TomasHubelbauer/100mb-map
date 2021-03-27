@@ -32,6 +32,10 @@ down for the extract which need it.
 
 ### Develop a web app for rendering the vectors
 
+### Develop the PBF viewer to build the map rendered upon
+
+https://wiki.openstreetmap.org/wiki/PBF_Format
+
 ### Set up updating the PBF to latest daily using GitHub Actions and no history
 
 The Czech Republic PBF from Geofabrik should fit within the repository, but it
