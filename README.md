@@ -22,6 +22,16 @@ GitHub Pages support range requests: https://github.com/tomashubelbauer/fetch-ra
 This means that a progressive PBF reader could be used to implement an OSM view
 in the browser with just a static file server.
 
+## Running
+
+Run a local file server and access it. This is needed for ESM in the browser,
+which is not supported on the `file` protocol due to CORS. E.g.:
+
+```sh
+python3 -m http.server
+# http://localhost:8000
+```
+
 ## To-Do
 
 ### Consider possible approaches usable to bring the PBFs below the repo limits
@@ -44,3 +54,19 @@ not grown beyond the limit due to its history.
 
 Use git-sizer to check on the repository size metrics in the GitHub Actions log:
 https://github.com/github/git-sizer
+
+### Detect inability to download the PBF using ranged requests
+
+Right now the app only accepts the PBF through the `input[type=file]` element.
+This is for development while the PBF is not a part of the repository. Once it
+is, the app should detect whether it is able to load the PBF using a ranged
+fetch request and if not, fallback to the `input`. This will make development
+easy without having to use a local file server capable of ranged requests.
+The Python HTTP module I am using doesn't support those and I don't want to have
+to install a special file server that does, so instead I will load the file this
+way. The browser will remember the selected file so it is very seamless.
+
+### Figure out the structure of the PBF stream and the compression used in data
+
+The `OSMData` blobs seem to be compressed if I'm reading the OSM wiki article
+correctly, but I don't know how.
