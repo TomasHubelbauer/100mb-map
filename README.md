@@ -37,3 +37,6 @@ down for the extract which need it.
 The Czech Republic PBF from Geofabrik should fit within the repository, but it
 must not have any history, so `filter-branch` should be used to ensure it does
 not grown beyond the limit due to its history.
+
+Use git-sizer to check on the repository size metrics in the GitHub Actions log:
+https://github.com/github/git-sizer
